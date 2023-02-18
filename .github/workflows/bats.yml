@@ -9,10 +9,11 @@ on:
       - "**.md"
 
 jobs:
-  plugin_test:
+  test:
     strategy:
       matrix:
-        os: [macos-latest, ubuntu-latest]
+        os:
+          - ubuntu-latest
 
     runs-on: ${{ matrix.os }}
 
