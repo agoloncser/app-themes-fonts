@@ -14,6 +14,7 @@ jobs:
       matrix:
         os:
           - ubuntu-latest
+          - macos-latest
 
     runs-on: ${{ matrix.os }}
 
@@ -29,6 +30,10 @@ jobs:
           packages: gconf2
           version: 1.0
         if: matrix.os == 'ubuntu-latest'
+
+      - name: Install dependencies
+        run: brew install bats-core
+        if: matrix.os == 'macos-latest'
 
       - name: Check out code
         uses: actions/checkout@v2
