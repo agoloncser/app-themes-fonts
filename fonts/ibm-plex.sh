@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-set -eu
-set -xv
+set -euxv
 dir=$(mktemp -d)
 
 curl -L https://github.com/IBM/plex/tarball/master | gzip -cd | tar -xvf - -C "$dir/"
