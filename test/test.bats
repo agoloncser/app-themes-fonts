@@ -5,5 +5,5 @@
   run make fonts
 }
 @test "Install themes" {
-  run make fonts
+  run make themes
 }
